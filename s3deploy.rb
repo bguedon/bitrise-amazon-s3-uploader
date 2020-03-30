@@ -54,7 +54,7 @@ def export_output(out_key, out_value)
 end
 
 def do_s3upload(sourcepth, full_destpth, aclstr)
-  return system(%Q{aws s3 cp "#{sourcepth}" "#{full_destpth}" --acl "#{aclstr}"})
+  return system(%Q{aws s3 cp "#{sourcepth}" "#{full_destpth}" --acl "#{aclstr}" --recursive})
 end
 
 # -----------------------
